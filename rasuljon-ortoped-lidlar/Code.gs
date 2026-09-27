@@ -27,7 +27,7 @@ const HOLATLAR = {
   'Keldi': '#b7e1cd',
   'Kelmadi': '#f4c7c3',
   'Rad etdi': '#d9d9d9',
-  'Noto\'g\'ri raqam': '#d9d9d9'
+  "Noto'g'ri raqam": '#d9d9d9'
 };
 const YOPIQ = ['Keldi', 'Kelmadi', 'Rad etdi', "Noto'g'ri raqam"];
 
@@ -45,7 +45,7 @@ const C = { NUM: 1, VAQT: 2, ISM: 3, TEL: 4, HOLAT: 11, BOG: 12, KEL: 13, SOAT: 
 function onOpen() {
   SpreadsheetApp.getUi().createMenu('🦴 Lidlar')
     .addItem('Yangi lidlarni hozir olish', 'yangiLidlar')
-    .addItem('Bugun varag\'ini ochish', 'bugunniOch')
+    .addItem("Bugun varag'ini ochish", 'bugunniOch')
     .addSeparator()
     .addItem('Qayta sozlash (egasi uchun)', 'sozlash')
     .addToUi();
@@ -77,8 +77,8 @@ function sozlash() {
 
   const n = yangiLidlar();
   ss.setActiveSheet(op);
-  SpreadsheetApp.getUi().alert('Tayyor! ' + n + ' ta lid "Operator" varag\'iga ko\'chirildi.\n' +
-    'Yangi lidlar har 5 daqiqada o\'zi tushadi.');
+  SpreadsheetApp.getUi().alert('Tayyor! ' + n + " ta lid \"Operator\" varag'iga ko'chirildi.\n" +
+    "Yangi lidlar har 5 daqiqada o'zi tushadi.");
 }
 
 function operatorVarag_(sh) {
@@ -97,7 +97,7 @@ function operatorVarag_(sh) {
   WIDTHS.forEach((w, i) => sh.setColumnWidth(i + 1, w));
   sh.hideColumns(C.ID);
 
-  sh.getRange('B1').setNote('Ko\'k ustunlar — formadan avtomatik keladi.\nTo\'q sariq ustunlar — operator to\'ldiradi.');
+  sh.getRange('B1').setNote("Ko'k ustunlar — formadan avtomatik keladi.\nTo'q sariq ustunlar — operator to'ldiradi.");
   sh.getRange('L1').setNote("🟨 Sariq qator — BUGUN qo'ng'iroq qilish kerak\n🟥 Qizil qator — qo'ng'iroq kuni O'TIB KETGAN\n🟩 Yashil qator — bemor BUGUN keladi\n🔵 Ko'k holat — hali hech kim bog'lanmagan");
   sh.getRange('K1').setNote("\"Javob bermadi\" tanlansa, qo'ng'iroq sanasi o'zi ertaga qo'yiladi.");
 
@@ -295,20 +295,20 @@ function bugunVarag_(ss) {
     ['Soat', '№', 'Bemor ismi', 'Telefon', 'Shikoyat', 'Holat', 'Izoh'],
     '=IFERROR(SORT(FILTER({TEXT(' + o + 'N2:N,"HH:mm"),' + o + 'A2:A,' + o + 'C2:C,' + o + 'D2:D,' +
     o + 'F2:F,' + o + 'K2:K,' + o + 'O2:O},' + o + 'M2:M=TODAY(),' + o + 'C2:C<>""),1,TRUE),' +
-    '"Bugun qabulga yozilgan bemor yo\'q")');
+    "\"Bugun qabulga yozilgan bemor yo'q\")");
 
   const ochiq = YOPIQ.map(h => o + 'K2:K<>"' + h + '"').join(',');
   blok(45, "📞 BUGUN QO'NG'IROQ QILISH KERAK (muddati o'tganlar ham)", '#fff2a8',
     ['Sana', '№', 'Bemor ismi', 'Telefon', 'Shikoyat', 'Holat', 'Izoh'],
     '=IFERROR(SORT(FILTER({' + o + 'L2:L,' + o + 'A2:A,' + o + 'C2:C,' + o + 'D2:D,' +
     o + 'F2:F,' + o + 'K2:K,' + o + 'O2:O},' + o + 'L2:L<>"",' + o + 'L2:L<=TODAY(),' + ochiq + '),1,TRUE),' +
-    '"Bugun qo\'ng\'iroq qilinadigan bemor yo\'q ✅")');
+    "\"Bugun qo'ng'iroq qilinadigan bemor yo'q ✅\")");
   sh.getRange('A47:A400').setNumberFormat('dd.mm');
 
   blok(90, "🔵 HALI BOG'LANILMAGAN YANGI LIDLAR", '#cfe2ff',
     ['Lid vaqti', '№', 'Bemor ismi', 'Telefon', 'Shikoyat', 'Manzil', 'Bemor: qachon kelmoqchi'],
     '=IFERROR(SORT(FILTER({' + o + 'B2:B,' + o + 'A2:A,' + o + 'C2:C,' + o + 'D2:D,' +
-    o + 'F2:F,' + o + 'E2:E,' + o + 'I2:I},' + o + 'K2:K="Yangi"),1,FALSE),"Yangi lid yo\'q ✅")');
+    o + 'F2:F,' + o + 'E2:E,' + o + 'I2:I},' + o + "K2:K=\"Yangi\"),1,FALSE),\"Yangi lid yo'q ✅\")");
   sh.getRange('A92:A400').setNumberFormat('dd.mm HH:mm');
   sh.setFrozenRows(1);
   himoya_(sh, 'bugun', sh.getRange('A1:G400'));
