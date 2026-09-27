@@ -131,8 +131,15 @@ function formatla_(sh) {
 
   const sana = SpreadsheetApp.newDataValidation().requireDate().setAllowInvalid(false)
     .setHelpText('Sanani tanlash uchun katakni 2 marta bosing').build();
-  sh.getRange(2, C.HOLAT, n).setDataValidation(SpreadsheetApp.newDataValidation()
-    .requireValueInList(Object.keys(HOLATLAR), true).setAllowInvalid(false).build());
+  // Holat ro'yxati: qo'lda "Чип" uslubi va ranglar qo'yilgan bo'lsa, o'shani pastga ko'chiramiz
+  const holatR = sh.getRange(2, C.HOLAT, n);
+  const birinchi = sh.getRange(2, C.HOLAT);
+  if (birinchi.getDataValidation()) {
+    birinchi.copyTo(holatR, SpreadsheetApp.CopyPasteType.PASTE_DATA_VALIDATION, false);
+  } else {
+    holatR.setDataValidation(SpreadsheetApp.newDataValidation()
+      .requireValueInList(Object.keys(HOLATLAR), true).setAllowInvalid(false).build());
+  }
   sh.getRange(2, C.BOG, n, 2).setDataValidation(sana);
 
   const all = sh.getRange(2, 1, n, HEADERS.length - 1);
@@ -148,9 +155,7 @@ function formatla_(sh) {
       .whenFormulaSatisfied('=AND($L2<>"",$L2=TODAY(),' + ochiq + ')')
       .setBackground('#fff2a8').setBold(true).setRanges([all]).build()
   ];
-  const holat = sh.getRange(2, C.HOLAT, n);
-  Object.keys(HOLATLAR).forEach(h => rules.push(SpreadsheetApp.newConditionalFormatRule()
-    .whenTextEqualTo(h).setBackground(HOLATLAR[h]).setRanges([holat]).build()));
+  // Holat ranglari "Чип" ro'yxatining o'zida beriladi (katak foni bo'yalmaydi)
   sh.setConditionalFormatRules(rules);
 
   // Filtr butun jadvalni qamrab olsin
