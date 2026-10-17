@@ -1,0 +1,10 @@
+{
+  "_izoh": "Stiker kutubxonasi. AI stikerni gap MA'NOSIGA qarab tanlaydi (teglar — uz/en/ru so'z boshlari). fon: 'doira' = qora/to'q ikon oq doira ichida chiqadi. Yangi stiker: PNG (shaffof fon) shu papkaga + shu ro'yxatga qator.",
+  "stikerlar": [
+    {"fayl": "miya.png", "teglar": ["miya", "aql", "fikr", "o'yla", "bosh", "brain", "think", "mind", "мозг", "дума"], "ma'no": "miya, fikrlash, 'brain rot'"},
+    {"fayl": "qum-soat.png", "teglar": ["vaqt", "soat", "daqiqa", "kut", "muddat", "time", "wait", "hour", "врем", "час"], "ma'no": "vaqt o'tishi, kutish"},
+    {"fayl": "qum-soat-oltin.png", "teglar": ["vaqtingiz", "umr", "kech", "tezroq", "deadline", "spend"], "ma'no": "qimmatli vaqt, muddat (oltin — hashamatli)"},
+    {"fayl": "reels-ikon.png", "fon": "doira", "teglar": ["reels", "rils", "video", "instagram", "kontent", "scroll", "videos", "watching", "видео"], "ma'no": "Reels / qisqa videolar"},
+    {"fayl": "ogohlantirish.png", "teglar": ["diqqat", "xavf", "ehtiyot", "muammo", "xato", "ogoh", "yomon", "warning", "danger", "not", "bad", "опасн", "ошибк"], "ma'no": "ogohlantirish, xavf, yomon odat"}
+  ]
+}

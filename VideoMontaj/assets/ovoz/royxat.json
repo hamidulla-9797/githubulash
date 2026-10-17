@@ -1,0 +1,117 @@
+{
+ "_izoh": "Mixkit Sound Effects Free License (mixkit.co/license) — tijoriy, reklama, atributsiyasiz. Manba: assets.mixkit.co",
+ "effektlar": [
+  {
+   "fayl": "whoosh_tez.mp3",
+   "mixkit_id": 1490,
+   "asl_nomi": "Fast whoosh transition",
+   "qachon": "otish, kadr almashishi",
+   "davom": 1.76
+  },
+  {
+   "fayl": "whoosh_kino.mp3",
+   "mixkit_id": 1492,
+   "asl_nomi": "Cinematic whoosh fast transition",
+   "qachon": "hook boshi, katta o'tish",
+   "davom": 1.33
+  },
+  {
+   "fayl": "whoosh_pop.mp3",
+   "mixkit_id": 3005,
+   "asl_nomi": "Explainer video pops whoosh light pop",
+   "qachon": "yozuv/kartochka chiqishi",
+   "davom": 0.18
+  },
+  {
+   "fayl": "sweep.mp3",
+   "mixkit_id": 166,
+   "asl_nomi": "Fast small sweep transition",
+   "qachon": "yengil o'tish, slayd",
+   "davom": 0.78
+  },
+  {
+   "fayl": "pop.mp3",
+   "mixkit_id": 2357,
+   "asl_nomi": "Bubble pop up alert notification",
+   "qachon": "stiker, pufakcha",
+   "davom": 0.38
+  },
+  {
+   "fayl": "pop_quruq.mp3",
+   "mixkit_id": 2356,
+   "asl_nomi": "Dry pop up notification alert",
+   "qachon": "ro'yxat qatori, chip",
+   "davom": 0.3
+  },
+  {
+   "fayl": "click.mp3",
+   "mixkit_id": 1109,
+   "asl_nomi": "Select click",
+   "qachon": "tugma, tanlash",
+   "davom": 1.1
+  },
+  {
+   "fayl": "tugma.mp3",
+   "mixkit_id": 1137,
+   "asl_nomi": "Cool interface click tone",
+   "qachon": "generator bosilishi",
+   "davom": 0.46
+  },
+  {
+   "fayl": "ding.mp3",
+   "mixkit_id": 600,
+   "asl_nomi": "Achievement bell",
+   "qachon": "CTA, ✅",
+   "davom": 2.4
+  },
+  {
+   "fayl": "pul.mp3",
+   "mixkit_id": 1936,
+   "asl_nomi": "Magical coin win",
+   "qachon": "raqam/pul sanog'i oxiri",
+   "davom": 2.61
+  },
+  {
+   "fayl": "tanga.mp3",
+   "mixkit_id": 1993,
+   "asl_nomi": "Clinking coins",
+   "qachon": "pul haqida gap",
+   "davom": 1.02
+  },
+  {
+   "fayl": "kamera.mp3",
+   "mixkit_id": 1133,
+   "asl_nomi": "Camera shutter click",
+   "qachon": "kamera ramkasi, skrinshot",
+   "davom": 0.35
+  },
+  {
+   "fayl": "yozish.mp3",
+   "mixkit_id": 1393,
+   "asl_nomi": "Smartphone typing",
+   "qachon": "telefonda matn yozilishi",
+   "davom": 4.5
+  },
+  {
+   "fayl": "sehr.mp3",
+   "mixkit_id": 2350,
+   "asl_nomi": "Magic sparkle whoosh",
+   "qachon": "AI, generator, sirli narsa",
+   "davom": 3.5
+  },
+  {
+   "fayl": "xato.mp3",
+   "mixkit_id": 948,
+   "asl_nomi": "Wrong answer bass buzzer",
+   "qachon": "❌ muhr, noto'g'ri",
+   "davom": 2.55
+  },
+  {
+   "fayl": "zarba.mp3",
+   "mixkit_id": 2909,
+   "asl_nomi": "Cool impact movie trailer",
+   "qachon": "kuchli hook zarbasi (kam ishlat)",
+   "davom": 6.0
+  }
+ ]
+}
